@@ -1,0 +1,133 @@
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.menu-select {
+    float: right;
+    margin-top: -60px;
+}
+.clear { clear: both; }
+body {
+    font: 18px/1.4 arial, sans-serif;
+    color: #361414;
+    background: #1f024e;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(214, 90, 8);
+    padding: 25px;
+    text-align: center;
+    background-color: #541eaa;
+}
+    
+
+    main h1 {margin-top:-25px;}
+
+.rodape {
+    background: rgb(224, 124, 9);
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    }
+pre { font-size: 14px;}
+@media (max-width: 1040px) {
+    pre { font-size: 12px;}
+}
+/* navegação */
+ul, ol, li {
+    width: 400px;margin-left:0; 
+    padding-left:0; 
+    list-style: none;   
+}
+    
+li:hover {
+  background:rgba(0, 0, 0, 0.116);
+  
+}
+ 
+a:hover {
+    background-color: #0d004971;
+    color: #fff;
+}
+a, a:visited {
+    display: block;
+    color:rgb(240, 95, 12);
+    text-decoration: none;
+    font-size: 25px;
+}
+.menu-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.imagem-menu {
+  width: 100%;
+  max-width: 800px; /* controle do limite máximo */
+  object-fit: cover;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* faz a lista ocupar todo o restante */
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  display: block;
+  background-color: #541eaa;
+  color: rgb(240, 95, 12);
+  padding: 10px;
+  text-decoration: none;
+}
+
+label{
+    color: #b11127;
+}
+p{
+  color: #b11127;
+}
+
+a {
+  position: relative;
+
+  
+}
+a {
+  /* Diz que o link será a referência para qualquer elemento interno que use position */
+  position: relative;
+  /* Afastamento da borda */
+  padding: 10px;
+  color: rgb(240, 95, 12);
+  text-decoration: none;
+  /* Faz a troca de cor (se você alterar no hover) ser suave, levando 0.3 segundos. */
+  transition: color 0.3s;
+}
+
+a::after {
+  /* Cria uma linha decorativa invisivel embaixo do link */
+  content: "";
+  /* Cria um elemento vazio depois do conteudo do link */
+  position: absolute;
+  /* Posiciona de forma absoluta */
+  width: 0%; 
+  /* largura */
+  height: 3px; /* altura*/
+  bottom: 0;
+  left: 0;
+  background-color: rgb(240, 95, 12);
+  transition: width 0.3s;
+   /* Faz a linha crescer suavemente (em 0.3 segundos) quando o hover acontecer. */
+}
+
+a:hover::after {
+  width: 100%;
+   /* Quando passa o mouse, a largura da linha vai de 0% pra 100%, preenchendo toda a parte de baixo do link. */
+}
